@@ -1,4 +1,4 @@
-// script.js
+// script.js  
 
 let display = document.getElementById("display");
 
@@ -18,6 +18,12 @@ function calculate(){
 
     try{
         display.value = eval(display.value);
+        if(result==Infinity || result===-Infinity){
+            display.value="Error";
+        }
+        else{
+            display.value=result;
+        }
     }
 
     catch{
